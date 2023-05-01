@@ -2,21 +2,21 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url(../../fonts/lato/Lato-Regular.woff2) format("woff2"), url(../../fonts/lato/Lato-Regular.woff2) format("woff");
+  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff2") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url(../../fonts/oswald/oswaldregular.woff2) format("woff2"), url(../../fonts/oswald/oswaldregular.woff2) format("woff");
+  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../../fonts/oswald/oswaldregular.woff2") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url(../../fonts/oswald/oswaldmedium.woff2) format("woff2"), url(../../fonts/oswald/oswaldmedium.woff2) format("woff2");
+  src: url("../../fonts/oswald/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswald/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
 img {
@@ -36,7 +36,7 @@ a {
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -57,11 +57,12 @@ input {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   background-color: #FFFFFF;
+  overflow-x: hidden;
 }
 @media (max-width: 767px) {
   .main-header--line {
@@ -95,30 +96,38 @@ input {
   display: flex;
   align-items: center;
   min-height: 65px;
+  transition: 0.2s;
+}
+.main-header__logo-wrapper:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.main-header__logo-wrapper:active {
+  opacity: 0.6;
+  transition: 0.2s;
 }
 .logo {
   display: block;
   width: 33.32px;
   height: 37.61px;
-  background-image: url(../../img/logo-mobile.svg);
+  background-image: url("../../img/logo-mobile.svg");
 }
 @media (min-width: 768px) {
   .logo {
     width: 61px;
     height: 50px;
-    background-image: url(../../img/logo-tablet.svg);
+    background-image: url("../../img/logo-tablet.svg");
   }
 }
 @media (min-width: 1440px) {
   .logo {
     width: 71px;
     height: 60px;
-    background-image: url(../../img/logo-desktop.svg);
+    background-image: url("../../img/logo-desktop.svg");
   }
 }
-.logo-2__image--big {
-  width: 128.02px;
-  height: 24.1px;
+.logo-2 svg:hover {
+  fill: #3e3e3e;
 }
 .button {
   font-family: "Oswald", Arial, sans-serif;
@@ -131,6 +140,13 @@ input {
   color: #FFFFFF;
   padding: 14px 26px;
 }
+.button--primary:hover {
+  background-color: #5EAA2F;
+}
+.button--primary:active {
+  background-color: #5EAA2F;
+  color: rgba(255, 255, 255, 0.3);
+}
 .button--wide {
   font-size: 16px;
   line-height: 20px;
@@ -141,6 +157,13 @@ input {
 .button--tertiary {
   background: #F2F2F2;
   color: #444444;
+}
+.button--tertiary:hover,
+.button--tertiary:active {
+  background-color: #EBEBEB;
+}
+.button--tertiary:active {
+  color: rgba(68, 68, 68, 0.3);
 }
 .nav-list {
   display: flex;
@@ -200,7 +223,7 @@ input {
   position: absolute;
   width: 24px;
   height: 18px;
-  background-image: url(../../img/nav-toggle.svg);
+  background-image: url("../../img/nav-toggle.svg");
   top: 0;
   right: 0;
 }
@@ -318,7 +341,7 @@ input {
 .hero__wrapper {
   min-height: 302px;
   background-color: #68B738;
-  background: url(../../img/index-background-hero.jpg);
+  background: url("../../img/index-background-hero.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -341,7 +364,7 @@ input {
     width: 50%;
     height: 74%;
     background-color: #68B738;
-    background-image: url(../../img/index-background-hero.jpg);
+    background-image: url("../../img/index-background-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -472,7 +495,7 @@ input {
 .services__description {
   margin: 0;
   padding: 29px 0 23px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 @media (min-width: 768px) {
   .services__description {
@@ -501,7 +524,7 @@ input {
   content: "";
   width: 32px;
   height: 10px;
-  background-image: url(../../img/arrow-right.svg);
+  background-image: url("../../img/arrow-right.svg");
   margin-left: 15px;
 }
 @media (min-width: 768px) {
@@ -555,7 +578,7 @@ input {
 .services-item--slim::before {
   width: 50px;
   height: 53px;
-  background-image: url(../../img/cat-slim.svg);
+  background-image: url("../../img/cat-slim.svg");
 }
 @media (min-width: 768px) {
   .services-item--slim::before {
@@ -576,7 +599,7 @@ input {
 .services-item--pro::before {
   width: 67px;
   height: 50px;
-  background-image: url(../../img/cat-pro.svg);
+  background-image: url("../../img/cat-pro.svg");
 }
 @media (min-width: 768px) {
   .services-item--pro::before {
@@ -641,7 +664,7 @@ input {
 }
 @media (min-width: 768px) {
   .how-it-works__item {
-    padding: 151px 26px 57px 0px;
+    padding: 151px 26px 57px 0;
   }
 }
 .how-it-works__item::before {
@@ -663,22 +686,22 @@ input {
   }
 }
 .how-it-works__item--leaf::before {
-  background-image: url(../../img/icon-leaf.svg);
+  background-image: url("../../img/icon-leaf.svg");
 }
 .how-it-works__item--tub::before {
-  background-image: url(../../img/icon-tub.svg);
+  background-image: url("../../img/icon-tub.svg");
 }
 .how-it-works__item--eat::before {
-  background-image: url(../../img/icon-eat.svg);
+  background-image: url("../../img/icon-eat.svg");
 }
 .how-it-works__item--alarm::before {
-  background-image: url(../../img/icon-alarm.svg);
+  background-image: url("../../img/icon-alarm.svg");
 }
 @media (min-width: 768px) {
   .how-it-works__item::after {
     content: counter(my-counter);
     counter-increment: my-counter;
-    font-family: "Oswald";
+    font-family: "Oswald", Arial, sans-serif;
     font-weight: 400;
     font-size: 280px;
     line-height: 280px;
@@ -917,7 +940,7 @@ input {
 }
 @media (min-width: 768px) {
   .contacts__wrapper {
-    padding: 56px 0px;
+    padding: 56px 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1260,7 +1283,7 @@ input {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url(../../img/icon-email.svg);
+  background-image: url("../../img/icon-email.svg");
   right: 15px;
 }
 .program-selection-form__item--phone {
@@ -1271,13 +1294,18 @@ input {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url(../../img/icon-phone.svg);
+  background-image: url("../../img/icon-phone.svg");
   right: 15px;
 }
 .program-selection-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 767px) {
+  .contact-details__title {
+    width: 201px;
+  }
 }
 .title-form {
   font-family: "Oswald", Arial, sans-serif;
@@ -1286,12 +1314,30 @@ input {
   line-height: 26px;
   color: #000000;
   margin: 0;
+  background-color: #FFFFFF;
+}
+.title-form--line {
   position: relative;
 }
 @media (min-width: 768px) {
   .title-form {
     font-size: 36px;
     line-height: 36px;
+  }
+}
+.title-form--line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 2px;
+  background-color: #68B738;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .title-form--line::after {
+    left: 0;
   }
 }
 .comment__title {
@@ -1547,12 +1593,16 @@ input {
   grid-area: link;
 }
 .catalog-list__link--show-more {
+  margin-top: 0;
   display: block;
   width: 30px;
   height: 30px;
   position: relative;
   order: -1;
   align-self: center;
+  font-size: 20px;
+  line-height: 0px;
+  padding: 14px 26px;
 }
 @media (min-width: 768px) {
   .catalog-list__link--show-more {
@@ -1631,9 +1681,6 @@ input {
     margin-top: 87px;
   }
 }
-.catalog-list__link--show-more {
-  margin-top: 0;
-}
 .title-tertiary {
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
@@ -1677,12 +1724,14 @@ input {
 }
 .additional-goods__title {
   line-height: 24px;
-  padding: 25px 0 36px;
+  padding: 25px 21px 36px 0;
+  position: relative;
+  display: inline-block;
 }
 @media (min-width: 768px) {
   .additional-goods__title {
     line-height: 36px;
-    padding: 68px 0 80px;
+    padding: 68px 36px 80px;
     margin-left: 37px;
   }
 }
@@ -1775,7 +1824,7 @@ input {
 .gifts__container {
   min-height: 290px;
   background-color: #68B738;
-  background-image: url(../../img/gifts-background.jpg);
+  background-image: url("../../img/gifts-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
